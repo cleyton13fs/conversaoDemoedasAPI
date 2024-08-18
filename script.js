@@ -1,4 +1,4 @@
-const API_URL = 'https://v6.exchangerate-api.com/v6/9eb8e30741caa96818ec1d9d/latest/'; // Sua URL da API
+const API_URL = 'https://v6.exchangerate-api.com/v6/9eb8e30741caa96818ec1d9d/latest/';
 
 async function obterCotacaoMoeda(moedaBase, moedaDestino) {
     try {
@@ -32,7 +32,6 @@ async function exemploConversaoMoeda(valor, moedaBase, moedaDestino) {
     }
 }
 
-// Manipulador de evento para o formulário
 document.getElementById('form-conversao').addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -51,7 +50,6 @@ document.getElementById('form-conversao').addEventListener('submit', function(ev
     exemploConversaoMoeda(valor, moedaBase, moedaDestino);
 });
 
-// Manipulador para mostrar/ocultar campos de moeda personalizada
 document.getElementById('moedaBase').addEventListener('change', function() {
     document.getElementById('moedaBasePersonalizada').style.display = this.value === '' ? 'block' : 'none';
 });
